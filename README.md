@@ -3,6 +3,8 @@
 
 ## 2. Asumir independencia de X y Y. Analíticamente, ¿cuál es entonces la expresión de la función de densidad conjunta que modela los datos?
 
+"$$f_{X,Y}(x, y)$$"
+
 1. $s$
 
 1. Elemento 1
