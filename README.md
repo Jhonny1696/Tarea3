@@ -3,10 +3,11 @@
 
 ## 2. Asumir independencia de X y Y. Analíticamente, ¿cuál es entonces la expresión de la función de densidad conjunta que modela los datos?
 
-
+$
 \begin(equation)
   a = b - mc^2
 \end(equation)
+$
 
 1. $s$
 
