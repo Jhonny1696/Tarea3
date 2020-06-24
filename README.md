@@ -5,6 +5,8 @@
 
 $s$
 
+1. Elemento 1
+2. Elemento 2
 ## 3. Hallar los valores de correlación, covarianza y coeficiente de correlación (Pearson) para los datos y explicar su significado.
 
 ## 4. Graficar las funciones de densidad marginales (2D), la función de densidad conjunta (3D).
