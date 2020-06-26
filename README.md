@@ -6,6 +6,8 @@
 
 $\x_{i}$
 
+<img alt="$\frac{dy}{dx}$"
+
 
 
 1. Elemento 1
