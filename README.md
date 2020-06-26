@@ -42,10 +42,14 @@ f(x,y) = f(x) * f(y) = \frac{1}{\sqrt{2\pi(2,299)^2}} * exp[\frac{-(x-9,905)^2}{
 ## 3. Hallar los valores de correlación, covarianza y coeficiente de correlación (Pearson) para los datos y explicar su significado.
 
 ### Correlación
-Para clcular la correlación entre X y Y se utilizó la ecuación (\ref{ecu:correlacion})
+Para clcular la correlación entre X y Y se utilizó la ecuación (\ref{ecu:correlacion}), para una variable discreta corresponde a la sumatoria de la multiplicación de cada $x_i$ por cada $y_j$ por la respectiva probabilidad conjunta.
+
+
 \begin{equation}\label{ecu:correlacion}
 R_{xy} = \int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}xyf_{x,y}(x,y) \cdot dx dy
 \end{equation}
+
+A nivel de programación, se recorrió, por medio de bucles `for`, la matris de probailidades del archivo xyp.csv y se realizó la operación mencionada.
 
 ### Covarianza
 
