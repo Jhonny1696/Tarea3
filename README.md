@@ -53,20 +53,21 @@ A nivel de programación, se recorrió, por medio de bucles `for`, la matriz de 
 
 ### Covarianza
 
-La covarianza se calcula de forma similar a la correalción, en este caso a los valores de las variables hay que restarle al respectiva media. 
+La covarianza se calcula de forma similar a la correalción, en este caso a los valores de las variables hay que restarle al respectiva media, como lo describe \ref{ecu:covarianza}. Es importante mencionar que el valor de la media para una distribución normal es igual al parámetro $\mu$, que ya había sido calculado previamente.
 
 \begin{equation}\label{ecu:covarianza}
 C_{xy} = \int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}(x-\bar{X})(y-\bar{Y})f_{x,y}(x,y) \cdot dx dy
 \end{equation}
 
-$C_{xy}  = 0,06669$.
-### Coeficiente de correlaxión
+El resultado de la covarianza es $C_{xy}  = 0,06669$, del cual lo más impotante es el signo. Al ser signo positivo indica que la correlación es directa, es decir que a grandes valores de $X$ corresponde valores grandes de $Y$, y viceversa.
+### Coeficiente de correlación
+Con el valor de la covarianza, se puede usar (\ref{ecu:coef}) para obtener el coeficiente de correlación. En este caso se necesita el valor de desviación estandar de las variables aleatorias, estos valores para una distribución normal corresponden al parámetro $\sigma$ y ya había sido calculado anteriormente.
 
-\begin{equation}
+\begin{equation}\label{ecu:coef}
 \rho = \frac{C_{xy}}{\sigma_x \sigma_y}
 \end{equation}
 
-$\rho  = 0,003354$
+El resultado obtenido es $\rho  = 0,003354$, este valor cercano a cero indica que la correlación entre $X$ y $Y$ no es tan fuerte. 
 ## 4. Graficar las funciones de densidad marginales (2D), la función de densidad conjunta (3D).
 
 ![](https://github.com/Jhonny1696/Tarea3/blob/master/pdf-x.png)
