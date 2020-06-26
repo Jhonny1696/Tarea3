@@ -55,6 +55,9 @@ C_{xy} = \int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}(x-\bar{X})(y-\bar{Y})f
 
 ### Coeficiente de correlaxión
 
+\begin{equation}
+\rho = \frac{C_{xy}}{\sigma_x \sigma_y}
+\end{equation}
 ## 4. Graficar las funciones de densidad marginales (2D), la función de densidad conjunta (3D).
 
 ![](https://github.com/Jhonny1696/Tarea3/blob/master/pdf-x.png)
