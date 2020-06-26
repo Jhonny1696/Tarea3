@@ -4,7 +4,7 @@
 ## 2. Asumir independencia de X y Y. Analíticamente, ¿cuál es entonces la expresión de la función de densidad conjunta que modela los datos?
 
 
-$x_{i}$
+$\x_{i}$
 
 
 
