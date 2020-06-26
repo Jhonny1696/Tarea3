@@ -12,7 +12,7 @@ $\x_{i}$
 
 <img alt="$\frac{dy}{dx}$"
 
-
+![equation](<a href="https://www.codecogs.com/eqnedit.php?latex=\sum&space;x^{a}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sum&space;x^{a}" title="\sum x^{a}" /></a>)
 
 1. Elemento 1
 2. Elemento 2
