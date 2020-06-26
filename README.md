@@ -49,7 +49,7 @@ Para clcular la correlación entre X y Y se utilizó la ecuación (\ref{ecu:corr
 R_{xy} = \int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}xyf_{x,y}(x,y) \cdot dx dy
 \end{equation}
 
-A nivel de programación, se recorrió, por medio de bucles `for`, la matris de probailidades del archivo xyp.csv y se realizó la operación mencionada.
+A nivel de programación, se recorrió, por medio de bucles `for`, la matris de probailidades del archivo xyp.csv y se realizó la operación mencionada. El resultado obtenido es $R_{xy}  = 149,54$.
 
 ### Covarianza
 
@@ -57,11 +57,14 @@ A nivel de programación, se recorrió, por medio de bucles `for`, la matris de 
 C_{xy} = \int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}(x-\bar{X})(y-\bar{Y})f_{x,y}(x,y) \cdot dx dy
 \end{equation}
 
+$C_{xy}  = 0,06669$.
 ### Coeficiente de correlaxión
 
 \begin{equation}
 \rho = \frac{C_{xy}}{\sigma_x \sigma_y}
 \end{equation}
+
+$\rho  = .,003354
 ## 4. Graficar las funciones de densidad marginales (2D), la función de densidad conjunta (3D).
 
 ![](https://github.com/Jhonny1696/Tarea3/blob/master/pdf-x.png)
