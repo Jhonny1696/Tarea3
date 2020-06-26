@@ -49,11 +49,12 @@ Para clcular la correlación entre X y Y se utilizó la ecuación (\ref{ecu:corr
 R_{xy} = \int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}xyf_{x,y}(x,y) \cdot dx dy
 \end{equation}
 
-A nivel de programación, se recorrió, por medio de bucles `for`, la matriz de probailidades del archivo xyp.csv y se realizó la operación mencionada. El resultado obtenido es $R_{xy}  = 149,54$, del cual se destaca el signo positivo ya que esto indica que las variables poseen dependencia directa, es decir para valores grandes de $X$ corresponden grandes valores de $Y$, y viceversa. En caso de que la correlación fuese cero, las variables serian independientes u ortogonales. 
+A nivel de programación, se recorrió, por medio de bucles `for`, la matriz de probailidades del archivo xyp.csv y se realizó la operación mencionada. El resultado obtenido es $R_{xy}  = 149,54$, que indica el grado en el cual las variables estan linealmente asociadas. En caso de que la correlación fuese cero, las variables serian independientes u ortogonales. 
 
 ### Covarianza
 
-\begin{equation}
+\begin{equation}\label{ecu:covarianza}
+La covarianza se calcula de forma similar a la correalción, en este caso a los valores de las variables hay que restarle al respectiva media. 
 C_{xy} = \int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}(x-\bar{X})(y-\bar{Y})f_{x,y}(x,y) \cdot dx dy
 \end{equation}
 
