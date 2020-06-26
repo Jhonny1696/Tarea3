@@ -27,6 +27,9 @@ Una vez obtenidos los parámetros se puede construir los modelos:
 f(x) = \frac{1}{\sqrt{2\pi(2,299)^2}} * exp[\frac{-(x-9,905)^2}{2(2,299)^2}]
 \end{equation}
 
+\begin{equation}
+f(y) = \frac{1}{\sqrt{2\pi(6,027)^2}} * exp[\frac{-(x-15,08)^2}{2(6,027)^2}]
+\end{equation}
 
 ## 2. Asumir independencia de X y Y. Analíticamente, ¿cuál es entonces la expresión de la función de densidad conjunta que modela los datos?
 
