@@ -5,6 +5,18 @@ sudo pip install readme2tex
 # Tarea3
 ## 1. A partir de los datos, encontrar la mejor curva de ajuste (modelo probabilístico) para las funciones de densidad marginales de X y Y.
 
+Para encontrar la función de densidad marginal de X y Y
+
+\begin{equation}
+y = \int_{x=0}^{x=2 \pi + 10} f(x) \cdot dx
+\end{equation}
+
+$$
+\begin{equation}
+y = \int_{x=0}^{x=2 \pi + 10} f(x) \cdot dx
+\end{equation}
+$$
+
 ## 2. Asumir independencia de X y Y. Analíticamente, ¿cuál es entonces la expresión de la función de densidad conjunta que modela los datos?
 
 
