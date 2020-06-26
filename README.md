@@ -49,6 +49,10 @@ R_{xy} = \int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}xyf_{x,y}(x,y) \cdot dx
 
 ### Covarianza
 
+\begin{equation}
+C_{xy} = \int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}(x-\bar{X})(y-\bar{Y})f_{x,y}(x,y) \cdot dx dy
+\end{equation}
+
 ### Coeficiente de correlaxión
 
 ## 4. Graficar las funciones de densidad marginales (2D), la función de densidad conjunta (3D).
