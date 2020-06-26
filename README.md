@@ -24,7 +24,7 @@ A continuación se presenta un cuadro que incluye el valor de los parámetros de
 Una vez obtenidos los parámetros se puede construir los modelos:
 
 \begin{equation}
-f(y) = \frac{1}{\sqrt{2\pi(2,299)^2}}
+f(x) = \frac{1}{\sqrt{2\pi(2,299)^2}} * exp[\frac{-(x-9,905)^2}{2(2,299)^2}]
 \end{equation}
 
 
