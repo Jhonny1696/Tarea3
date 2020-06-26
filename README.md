@@ -8,14 +8,13 @@ sudo pip install readme2tex
 Para encontrar la función de densidad marginal de X y Y se aplicó las siguientes propiedades:
 
 \begin{equation}
-y = \int_{-\infty}^{+\infty} f_{x,y}(x,y) \cdot dy
+f(x) = \int_{-\infty}^{+\infty} f_{x,y}(x,y) \cdot dy
 \end{equation}
 
-$$
 \begin{equation}
-y = \int_{x=0}^{x=2 \pi + 10} f(x) \cdot dx
+f(y) = \int_{-\infty}^{+\infty} f_{x,y}(x,y) \cdot dx
 \end{equation}
-$$
+
 
 ## 2. Asumir independencia de X y Y. Analíticamente, ¿cuál es entonces la expresión de la función de densidad conjunta que modela los datos?
 
