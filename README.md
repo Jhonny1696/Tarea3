@@ -5,10 +5,10 @@ sudo pip install readme2tex
 # Tarea3
 ## 1. A partir de los datos, encontrar la mejor curva de ajuste (modelo probabilístico) para las funciones de densidad marginales de X y Y.
 
-Para encontrar la función de densidad marginal de X y Y
+Para encontrar la función de densidad marginal de X y Y se aplicó las siguientes propiedades:
 
 \begin{equation}
-y = \int_{x=0}^{x=2 \pi + 10} f(x) \cdot dx
+y = \int_{-\infty}^{+\infty} f_{x,y}(x,y) \cdot dy
 \end{equation}
 
 $$
