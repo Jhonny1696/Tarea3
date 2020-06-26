@@ -8,9 +8,7 @@ sudo pip install readme2tex
 ## 2. Asumir independencia de X y Y. Analíticamente, ¿cuál es entonces la expresión de la función de densidad conjunta que modela los datos?
 
 
-$\x_{i}$
 
-<img alt="$\frac{dy}{dx}$"
 $$a+b=c$$
 1. Elemento 1
 2. Elemento 2
