@@ -5,6 +5,9 @@
 
 "$$f_{X,Y}(x, y)$$"
 
+\begin{equation}
+ a = m^2
+\end{equation}
 
 $
   a = b - mc^2
