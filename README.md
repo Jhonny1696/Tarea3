@@ -14,6 +14,7 @@ f(y) = \int_{-\infty}^{+\infty} f_{x,y}(x,y) \cdot dx
 Al ser variables discretas, las ecuaciones anteriores se traducen como sumatorias de la probabilidad conjunta para cada X y cada Y. De esta manera, al sumar las probabilidades para una determinada $x_i$ se encuentra el valor de la pdf en ese punto. Esto se hizo para cada $x_i$ y $y_j$.
 A nivel de programación, para realizar las sumatorias se utilizó la función `numpy.sum()` con la matríz de probabilidades obtenida del archivo xy.csv.
 Teniendo la pdf marginal de las vriables se procedió a encontrar el modelo que mejor se ajustara; por la forma de las pdf se determinó que una distribución normal se ajusta bastante bien en ambos casos, por lo que se encontraron los parámetros de los modelos usando el método `curve_fit()` del paquete numpy. 
+A continuación se presenta un cuadro que incluye el valor de los parámetros del modelo de cada variable:
 
 |Varible|mu|sigma|
 |---|---|---|
