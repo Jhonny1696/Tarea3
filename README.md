@@ -40,4 +40,6 @@ $$a+b=c$$
 
 ## 4. Graficar las funciones de densidad marginales (2D), la función de densidad conjunta (3D).
 
+![](https://github.com/Jhonny1696/Tarea3/blob/master/pdf-x.png)
+[Función de densidad marginal de Y](https://github.com/Jhonny1696/Tarea3/blob/master/pdf-y.png)
 ![Función de densidada de probabilidd conjunta de X y Y.](https://github.com/Jhonny1696/Tarea3/blob/master/f(x%2Cy).png)
