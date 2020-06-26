@@ -16,7 +16,7 @@ A nivel de programación, para realizar las sumatorias se utilizó la función `
 Teniendo la pdf marginal de las vriables se procedió a encontrar el modelo que mejor se ajustara; por la forma de las pdf se determinó que una distribución normal se ajusta bastante bien en ambos casos, por lo que se encontraron los parámetros de los modelos usando el método `curve_fit()` del paquete numpy.
 A continuación se presenta un cuadro que incluye el valor de los parámetros del modelo de cada variable:
 
-|Varible|mu|sigma|
+|Varible|$\mu$|$\sigma$|
 |---|---|---|
 |X|9,905|2,299|
 |Y|15,08|6,027|
