@@ -21,10 +21,12 @@ A continuación se presenta un cuadro que incluye el valor de los parámetros de
 |X|9,905|2,299|
 |Y|15,08|6,027|
 
-Una vez que se tienen los parámetros de los modelos se pueden graficar ambas curvas
+Una vez obtenidos los parámetros se puede construir los modelos:
 
-![](https://github.com/Jhonny1696/Tarea3/blob/master/pdf-x.png)
-![Función de densidad marginal de Y](https://github.com/Jhonny1696/Tarea3/blob/master/pdf-y.png)
+\begin{equation}
+f(y) = \frac{1}{\sqrt{2\pi(2,299)^2}}
+\end{equation}
+
 
 ## 2. Asumir independencia de X y Y. Analíticamente, ¿cuál es entonces la expresión de la función de densidad conjunta que modela los datos?
 
