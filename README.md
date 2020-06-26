@@ -11,9 +11,7 @@ sudo pip install readme2tex
 $\x_{i}$
 
 <img alt="$\frac{dy}{dx}$"
-
-![](<a href="https://www.codecogs.com/eqnedit.php?latex=\sum&space;x^{a}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\sum&space;x^{a}" title="\sum x^{a}" /></a>)
-
+$$a+b=c$$
 1. Elemento 1
 2. Elemento 2
 
