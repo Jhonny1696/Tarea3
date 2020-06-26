@@ -17,9 +17,8 @@ Teniendo la pdf marginal de las vriables se procedió a encontrar el modelo que 
 
 |Varible|mu|sigma|
 |---|---|---|
-|X|||
-|Y|||
-
+|X|9,905|2,299|
+|Y|15,08|6,027|
 
 ## 2. Asumir independencia de X y Y. Analíticamente, ¿cuál es entonces la expresión de la función de densidad conjunta que modela los datos?
 
