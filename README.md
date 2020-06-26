@@ -12,6 +12,7 @@ f(y) = \int_{-\infty}^{+\infty} f_{x,y}(x,y) \cdot dx
 \end{equation}
 
 Al ser variables discretas, las ecuaciones anteriores se traducen como sumatorias de la probabilidad conjunta para cada X y cada Y. De esta manera, al sumar las probabilidades para una determinada $x_i$ se encuentra el valor de la pdf en ese punto. Esto se hizo para cada $x_i$ y $y_j$.
+A nivel de programación, para realizar las sumatorias se utilizó e la función numpy.sum() con la matríz de probabilidades obtenida del archivo xy.csv. 
 
 
 ## 2. Asumir independencia de X y Y. Analíticamente, ¿cuál es entonces la expresión de la función de densidad conjunta que modela los datos?
