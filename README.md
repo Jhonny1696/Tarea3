@@ -53,8 +53,9 @@ A nivel de programación, se recorrió, por medio de bucles `for`, la matriz de 
 
 ### Covarianza
 
-\begin{equation}\label{ecu:covarianza}
 La covarianza se calcula de forma similar a la correalción, en este caso a los valores de las variables hay que restarle al respectiva media. 
+
+\begin{equation}\label{ecu:covarianza}
 C_{xy} = \int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}(x-\bar{X})(y-\bar{Y})f_{x,y}(x,y) \cdot dx dy
 \end{equation}
 
