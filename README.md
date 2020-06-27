@@ -1,18 +1,13 @@
 # Tarea3
 ## 1. A partir de los datos, encontrar la mejor curva de ajuste (modelo probabilístico) para las funciones de densidad marginales de X y Y.
 
-Para encontrar la función de densidad marginal de $X$ y $Y$ se aplicó las siguientes propiedades:
+Para encontrar la función de densidad marginal de <img src="https://latex.codecogs.com/gif.latex?X" title="X" /> y <img src="https://latex.codecogs.com/gif.latex?Y" title="Y" /> se aplicó las siguientes propiedades:
 
-\insertequation
-\begin{equation}
-f(x) = \int_{-\infty}^{+\infty} f_{x,y}(x,y) \cdot dy
-\end{equation}
+<img src="https://latex.codecogs.com/svg.latex?f(x)&space;=&space;\int_{-\infty}^{&plus;\infty}&space;f_{x,y}(x,y)&space;\cdot&space;dy" title="f(x) = \int_{-\infty}^{+\infty} f_{x,y}(x,y) \cdot dy" />
 
-\begin{equation}
-f(y) = \int_{-\infty}^{+\infty} f_{x,y}(x,y) \cdot dx
-\end{equation}
+<img src="https://latex.codecogs.com/gif.latex?f(y)&space;=&space;\int_{-\infty}^{&plus;\infty}&space;f_{x,y}(x,y)&space;\cdot&space;dx" title="f(y) = \int_{-\infty}^{+\infty} f_{x,y}(x,y) \cdot dx" />
 
-Al ser variables discretas, las ecuaciones anteriores se traducen como sumatorias de la probabilidad conjunta para cada $X$ y cada $Y$. De esta manera, al sumar las probabilidades para una determinada $x_i$ se encuentra el valor de la pdf en ese punto. Esto se hizo para cada $x_i$ y $y_j$.
+Al ser variables discretas, las ecuaciones anteriores se traducen como sumatorias de la probabilidad conjunta para cada <img src="https://latex.codecogs.com/gif.latex?X" title="X" /> y cada <img src="https://latex.codecogs.com/gif.latex?Y" title="Y" />. De esta manera, al sumar las probabilidades para una determinada $x_i$ se encuentra el valor de la pdf en ese punto. Esto se hizo para cada $x_i$ y $y_j$.
 A nivel de programación, para realizar las sumatorias se utilizó la función `numpy.sum()` con la matríz de probabilidades obtenida del archivo xy.csv.
 Teniendo la pdf marginal de las vriables se procedió a encontrar el modelo que mejor se ajustara; por la forma de las pdf se determinó que una distribución normal se ajusta bastante bien en ambos casos, por lo que se encontraron los parámetros de los modelos usando el método `curve_fit()` del paquete numpy.
 A continuación se presenta un cuadro que incluye el valor de los parámetros del modelo de cada variable:
@@ -34,7 +29,7 @@ f(y) = \frac{1}{\sqrt{2\pi(6,027)^2}} * exp[\frac{-(x-15,08)^2}{2(6,027)^2}]
 
 ## 2. Asumir independencia de X y Y. Analíticamente, ¿cuál es entonces la expresión de la función de densidad conjunta que modela los datos?
 
-Al asumir independencia de $X$ y $Y$, la función de densidad conjunta se puede obtener al multiplicar las funciones de densidad marginales de cada varible.
+Al asumir independencia de <img src="https://latex.codecogs.com/gif.latex?X" title="X" /> y <img src="https://latex.codecogs.com/gif.latex?Y" title="Y" />, la función de densidad conjunta se puede obtener al multiplicar las funciones de densidad marginales de cada varible.
 
 \begin{equation}
 f(x,y) = f(x) * f(y) = \frac{1}{\sqrt{2\pi(2,299)^2}} * exp[\frac{-(x-9,905)^2}{2(2,299)^2}] * \frac{1}{\sqrt{2\pi(6,027)^2}} * exp[\frac{-(x-15,08)^2}{2(6,027)^2}]
@@ -43,7 +38,7 @@ f(x,y) = f(x) * f(y) = \frac{1}{\sqrt{2\pi(2,299)^2}} * exp[\frac{-(x-9,905)^2}{
 ## 3. Hallar los valores de correlación, covarianza y coeficiente de correlación (Pearson) para los datos y explicar su significado.
 
 ### Correlación
-Para clcular la correlación entre X y Y se utilizó la ecuación (\ref{ecu:correlacion}), para una variable discreta corresponde a la sumatoria de la multiplicación de cada $x_i$ por cada $y_j$ por la respectiva probabilidad conjunta.
+Para clcular la correlación entre <img src="https://latex.codecogs.com/gif.latex?X" title="X" /> y <img src="https://latex.codecogs.com/gif.latex?Y" title="Y" /> se utilizó la ecuación (\ref{ecu:correlacion}), para una variable discreta corresponde a la sumatoria de la multiplicación de cada $x_i$ por cada $y_j$ por la respectiva probabilidad conjunta.
 
 
 \begin{equation}\label{ecu:correlacion}
@@ -68,9 +63,9 @@ Con el valor de la covarianza, se puede usar (\ref{ecu:coef}) para obtener el co
 \rho = \frac{C_{xy}}{\sigma_x \sigma_y}
 \end{equation}
 
-El resultado obtenido es $\rho  = 0,003354$, este valor cercano a cero indica que la correlación entre $X$ y $Y$ no es tan fuerte. 
+El resultado obtenido es $\rho  = 0,003354$, este valor cercano a cero indica que la correlación entre <img src="https://latex.codecogs.com/gif.latex?X" title="X" /> y $Y$ no es tan fuerte. 
 ## 4. Graficar las funciones de densidad marginales (2D), la función de densidad conjunta (3D).
-Para graficar las pdf conjunta y  marginales de $X$ y $Y$, se utilizó la librería `matplotlib`. Se graficó la pdf original y el modelo superpuesto para ver la semejansa.
+Para graficar las pdf conjunta y  marginales de <img src="https://latex.codecogs.com/gif.latex?X" title="X" /> y <img src="https://latex.codecogs.com/gif.latex?Y" title="Y" />, se utilizó la librería `matplotlib`. Se graficó la pdf original y el modelo superpuesto para ver la semejansa.
 
 ![](https://github.com/Jhonny1696/Tarea3/blob/master/pdf-x.png)
 
