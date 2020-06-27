@@ -3,6 +3,7 @@
 
 Para encontrar la función de densidad marginal de $X$ y $Y$ se aplicó las siguientes propiedades:
 
+\insertequation
 \begin{equation}
 f(x) = \int_{-\infty}^{+\infty} f_{x,y}(x,y) \cdot dy
 \end{equation}
