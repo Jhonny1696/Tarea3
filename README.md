@@ -8,7 +8,7 @@ Para encontrar la función de densidad marginal de <img src="https://latex.codec
 <img src="https://latex.codecogs.com/gif.latex?f(y)&space;=&space;\int_{-\infty}^{&plus;\infty}&space;f_{x,y}(x,y)&space;\cdot&space;dx" title="f(y) = \int_{-\infty}^{+\infty} f_{x,y}(x,y) \cdot dx" />
 
 Al ser variables discretas, las ecuaciones anteriores se traducen como sumatorias de la probabilidad conjunta para cada <img src="https://latex.codecogs.com/gif.latex?X" title="X" /> y cada <img src="https://latex.codecogs.com/gif.latex?Y" title="Y" />. De esta manera, al sumar las probabilidades para una determinada <img src="https://latex.codecogs.com/gif.latex?x_i" title="x_i" /> se encuentra el valor de la pdf en ese punto. Esto se hizo para cada <img src="https://latex.codecogs.com/gif.latex?x_i" title="x_i" /> y <img src="https://latex.codecogs.com/gif.latex?y_j" title="y_j" />.
-A nivel de programación, para realizar las sumatorias se utilizó la función `numpy.sum()` con la matríz de probabilidades obtenida del archivo xy.csv.
+A nivel de programación, para realizar las sumatorias se utilizó la función `numpy.sum()` con la matríz de probabilidades obtenida del archivo `xy.csv`.
 Teniendo la pdf marginal de las vriables se procedió a encontrar el modelo que mejor se ajustara; por la forma de las pdf se determinó que una distribución normal se ajusta bastante bien en ambos casos, por lo que se encontraron los parámetros de los modelos usando el método `curve_fit()` del paquete numpy.
 A continuación se presenta un cuadro que incluye el valor de los parámetros del modelo de cada variable:
 
@@ -37,7 +37,7 @@ Para clcular la correlación entre <img src="https://latex.codecogs.com/gif.late
 
 <img src="https://latex.codecogs.com/gif.latex?R_{xy}&space;=&space;\int_{-\infty}^{&plus;\infty}\int_{-\infty}^{&plus;\infty}xyf_{x,y}(x,y)&space;\cdot&space;dx&space;dy" title="R_{xy} = \int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}xyf_{x,y}(x,y) \cdot dx dy" />
 
-A nivel de programación, se recorrió, por medio de bucles `for`, la matriz de probailidades del archivo xyp.csv y se realizó la operación mencionada. El resultado obtenido es <img src="https://latex.codecogs.com/gif.latex?\inline&space;R_{xy}&space;=&space;149,54" title="R_{xy} = 149,54" />, que indica el grado en el cual las variables estan linealmente asociadas. En caso de que la correlación fuese cero, las variables serian independientes u ortogonales. 
+A nivel de programación, se recorrió, por medio de bucles `for`, la matriz de probailidades del archivo `xyp.csv` y se realizó la operación mencionada. El resultado obtenido es <img src="https://latex.codecogs.com/gif.latex?\inline&space;R_{xy}&space;=&space;149,54" title="R_{xy} = 149,54" />, que indica el grado en el cual las variables estan linealmente asociadas. En caso de que la correlación fuese cero, las variables serian independientes u ortogonales. 
 
 ### Covarianza
 
