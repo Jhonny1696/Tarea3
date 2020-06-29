@@ -10,8 +10,8 @@ Matriz_xy = []
 Matriz_xyp = []
 
 # Se lee el archivo xy.csv
-with open('xy.csv', newline='') as archivo:
-  lineas = archivo.read().splitlines()
+with open('xy.csv', newline='') as xyFile:
+  lineas = xyFile.read().splitlines()
   lineas.pop(0)
 
   for l in lineas:
@@ -26,7 +26,7 @@ for sublist in A:
  Matriz_xy.append(float_sublist)
 
 '''
-fx y fy son vectores que contienen los puntos de la pdf de cada variable.
+fx y fy son listas que contienen los puntos de la pdf de cada variable.
 '''
 # pmf de X y de Y.
 fx = np.sum(Matriz_xy, axis = 1)
@@ -90,14 +90,14 @@ cmap='viridis', edgecolor='none')
 ax.set_xlabel('x')
 ax.set_ylabel('y')
 ax.set_zlabel('f(x,y)')
-ax.view_init(30, 40)
+ax.view_init(35, 40)
 
 # plt.show()
 
 # Se lee el archivo xyp.csv
-with open('xyp.csv') as f:
+with open('xyp.csv') as xypFile:
 
-  lineas = f.read().splitlines() 
+  lineas = xypFile.read().splitlines() 
   lineas.pop(0)
   
   
@@ -107,6 +107,7 @@ with open('xyp.csv') as f:
 
 Rxy = []
 
+# Se calcula la correlación
 for i in range(len(Matriz_xyp)):
   Rxy.append(Matriz_xyp[i][0] * Matriz_xyp[i][1] * Matriz_xyp[i][2])
 
@@ -117,11 +118,13 @@ correlacion = np.sum(Rxy, axis = 0)
 
 Cxy = []
 
+# Se calcula la covarianza
 for i in range(len(Matriz_xyp)):
   Cxy.append((Matriz_xyp[i][0] - mu_x) * (Matriz_xyp[i][1] - mu_y) * Matriz_xyp[i][2])
   
 covarianza = np.sum(Cxy, axis = 0)
 
+# Se calcula el coeficiente de correlación
 coef_correlacion = covarianza / (sigma_x * sigma_y)
 
 print('Correlacion: ', correlacion, '\n', 'covarianza: ', covarianza, '\n', 'coeficiente de correlacion: ',  coef_correlacion, '\n')
