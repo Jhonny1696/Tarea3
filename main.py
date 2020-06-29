@@ -1,3 +1,6 @@
+# Tarea 3 - IE0405
+# Jhonny González, B4292
+
 import csv
 import numpy as np
 import matplotlib.pyplot as plt
