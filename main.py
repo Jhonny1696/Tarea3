@@ -6,8 +6,8 @@ from scipy import stats
 from mpl_toolkits import mplot3d
 
 A = []
-Matriz_xy = []
-Matriz_xyp = []
+M_xy = []
+M_xyp = []
 
 # Se lee el archivo xy.csv
 with open('xy.csv', newline='') as xyFile:
@@ -23,14 +23,14 @@ for sublist in A:
  float_sublist = []  
  for x in sublist:
    float_sublist.append(float(x))    
- Matriz_xy.append(float_sublist)
+ M_xy.append(float_sublist)
 
 '''
 fx y fy son listas que contienen los puntos de la pdf de cada variable.
 '''
 # pmf de X y de Y.
-fx = np.sum(Matriz_xy, axis = 1)
-fy = np.sum(Matriz_xy, axis = 0)
+fx = np.sum(M_xy, axis = 1)
+fy = np.sum(M_xy, axis = 0)
 
 # vector X y Y
 vector_x = np.arange(5, 16, 1)
@@ -108,8 +108,8 @@ with open('xyp.csv') as xypFile:
 Rxy = []
 
 # Se calcula la correlación
-for i in range(len(Matriz_xyp)):
-  Rxy.append(Matriz_xyp[i][0] * Matriz_xyp[i][1] * Matriz_xyp[i][2])
+for i in range(len(M_xyp)):
+  Rxy.append(M_xyp[i][0] * M_xyp[i][1] * M_xyp[i][2])
 
 correlacion = np.sum(Rxy, axis = 0)
 
@@ -120,7 +120,7 @@ Cxy = []
 
 # Se calcula la covarianza
 for i in range(len(Matriz_xyp)):
-  Cxy.append((Matriz_xyp[i][0] - mu_x) * (Matriz_xyp[i][1] - mu_y) * Matriz_xyp[i][2])
+  Cxy.append((M_xyp[i][0] - mu_x) * (M_xyp[i][1] - mu_y) * M_xyp[i][2])
   
 covarianza = np.sum(Cxy, axis = 0)
 
