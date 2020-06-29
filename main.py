@@ -8,9 +8,13 @@ from scipy.optimize import curve_fit
 from scipy import stats 
 from mpl_toolkits import mplot3d
 
+# Listas en blanco
 A = []
 M_xy = []
 M_xyp = []
+Rxy = []
+Cxy = []
+
 
 # Se lee el archivo xy.csv
 with open('xy.csv', newline='') as xyFile:
@@ -28,9 +32,8 @@ for sublist in A:
    float_sublist.append(float(x))    
  M_xy.append(float_sublist)
 
-'''
-fx y fy son listas que contienen los puntos de la pdf de cada variable.
-'''
+# fx y fy son listas que contienen los puntos de la pdf de cada variable.
+
 # pmf de X y de Y.
 fx = np.sum(M_xy, axis = 1)
 fy = np.sum(M_xy, axis = 0)
@@ -40,15 +43,16 @@ vector_x = np.arange(5, 16, 1)
 vector_y = np.arange(5, 26, 1)
 
 '''
-Se determina que el ajuste de la pdf es una distribución normal en ambos casos. A continuación se define la función de la distribución.
+Se determina que el ajuste de la pdf es una distribución normal en ambos casos. 
+A continuación se define la función de la distribución.
 '''
 # Distribución gaussiana
 def gaussiana(a, mu, sigma):
   return 1/(np.sqrt(2*np.pi*sigma**2)) * np.exp(-(a - mu)**2/(2*sigma**2))
 
-'''
-Se obtienen los parámetros para cada distribución.
-'''
+
+# Se obtienen los parámetros para cada distribución.
+
 # Parámetros pdf de X y Y
 param_x, _ = curve_fit(gaussiana, vector_x, fx)
 param_y, _ = curve_fit(gaussiana, vector_y, fy)
@@ -108,7 +112,6 @@ with open('xyp.csv') as xypFile:
     linea = row.split(',')
     Matriz_xyp.append([float(linea[0]), float(linea[1]), float(linea[2])])
 
-Rxy = []
 
 # Se calcula la correlación
 for i in range(len(M_xyp)):
@@ -116,10 +119,6 @@ for i in range(len(M_xyp)):
 
 correlacion = np.sum(Rxy, axis = 0)
 
-
-
-
-Cxy = []
 
 # Se calcula la covarianza
 for i in range(len(Matriz_xyp)):
