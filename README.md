@@ -37,7 +37,7 @@ Para clcular la correlación entre <img src="https://latex.codecogs.com/gif.late
 
 <img src="https://latex.codecogs.com/gif.latex?R_{xy}&space;=&space;\int_{-\infty}^{&plus;\infty}\int_{-\infty}^{&plus;\infty}xyf_{x,y}(x,y)&space;\cdot&space;dx&space;dy" title="R_{xy} = \int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}xyf_{x,y}(x,y) \cdot dx dy" />
 
-A nivel de programación, se recorrió, por medio de bucles `for`, la matriz de probailidades del archivo `xyp.csv` y se realizó la operación mencionada. El resultado obtenido es <img src="https://latex.codecogs.com/gif.latex?\inline&space;R_{xy}&space;=&space;149,54" title="R_{xy} = 149,54" />, que indica el grado en el cual las variables estan linealmente asociadas. Para probar la independencia de las variables se hece la multiplicación de los valores medios, o parámetros <imgsrc="https://latex.codecogs.com/gif.latex?\mu" title="\mu" />:
+A nivel de programación, se recorrió, por medio de bucles `for`, la matriz de probailidades del archivo `xyp.csv` y se realizó la operación mencionada. El resultado obtenido es <img src="https://latex.codecogs.com/gif.latex?\inline&space;R_{xy}&space;=&space;149,54" title="R_{xy} = 149,54" />, que indica el grado en el cual las variables estan linealmente asociadas. Para probar la independencia de las variables se hece la multiplicación de los valores medios, o parámetros <img src="https://latex.codecogs.com/svg.latex?\mu" title="\mu" /> :
 
 <img src="https://latex.codecogs.com/svg.latex?E[x]E[y]&space;=&space;(9,905)(15,08)&space;=&space;149,37" title="E[x]E[y] = (9,905)(15,08) = 149,37" />
 
