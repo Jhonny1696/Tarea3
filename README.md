@@ -12,7 +12,6 @@ A nivel de programación, para realizar las sumatorias se utilizó la función `
 Teniendo la pdf marginal de las vriables se procedió a encontrar el modelo que mejor se ajustara; por la forma de las pdf se determinó que una distribución normal se ajusta bastante bien en ambos casos, por lo que se encontraron los parámetros de los modelos usando el método `curve_fit()` del paquete numpy.
 A continuación se presenta un cuadro que incluye el valor de los parámetros del modelo para cada variable:
 
-
 |Varible|<img src="https://latex.codecogs.com/gif.latex?\mu" title="\mu" />|<img src="https://latex.codecogs.com/gif.latex?\sigma" title="\sigma" />|
 |:---:|:---:|:---:|
 |X|9,905|2,299|
@@ -38,7 +37,13 @@ Para clcular la correlación entre <img src="https://latex.codecogs.com/gif.late
 
 <img src="https://latex.codecogs.com/gif.latex?R_{xy}&space;=&space;\int_{-\infty}^{&plus;\infty}\int_{-\infty}^{&plus;\infty}xyf_{x,y}(x,y)&space;\cdot&space;dx&space;dy" title="R_{xy} = \int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}xyf_{x,y}(x,y) \cdot dx dy" />
 
-A nivel de programación, se recorrió, por medio de bucles `for`, la matriz de probailidades del archivo `xyp.csv` y se realizó la operación mencionada. El resultado obtenido es <img src="https://latex.codecogs.com/gif.latex?\inline&space;R_{xy}&space;=&space;149,54" title="R_{xy} = 149,54" />, que indica el grado en el cual las variables estan linealmente asociadas. En caso de que la correlación fuese cero, las variables serian independientes u ortogonales. 
+A nivel de programación, se recorrió, por medio de bucles `for`, la matriz de probailidades del archivo `xyp.csv` y se realizó la operación mencionada. El resultado obtenido es <img src="https://latex.codecogs.com/gif.latex?\inline&space;R_{xy}&space;=&space;149,54" title="R_{xy} = 149,54" />, que indica el grado en el cual las variables estan linealmente asociadas. Para probar la independencia de las variables se hece la multiplicación de los valores medios, o parámetros <imgsrc="https://latex.codecogs.com/gif.latex?\mu" title="\mu" />:
+
+<img src="https://latex.codecogs.com/svg.latex?E[x]E[y]&space;=&space;(9,905)(15,08)&space;=&space;149,37" title="E[x]E[y] = (9,905)(15,08) = 149,37" />
+
+Se observa que el valor obtenido con ambos métodos se aproximan bastante entre sí por lo que la suposición de indepedencia fué correcta.
+
+
 
 ### Covarianza
 
@@ -46,7 +51,7 @@ La covarianza se calcula de forma similar a la correalción, en este caso a los 
 
 <img src="https://latex.codecogs.com/gif.latex?C_{xy}&space;=&space;\int_{-\infty}^{&plus;\infty}\int_{-\infty}^{&plus;\infty}(x-\bar{X})(y-\bar{Y})f_{x,y}(x,y)&space;\cdot&space;dx&space;dy" title="C_{xy} = \int_{-\infty}^{+\infty}\int_{-\infty}^{+\infty}(x-\bar{X})(y-\bar{Y})f_{x,y}(x,y) \cdot dx dy" />
 
-El resultado de la covarianza es <img src="https://latex.codecogs.com/gif.latex?C_{xy}&space;=&space;0,06669" title="C_{xy} = 0,06669" />, del cual lo más impotante es el signo. Al ser signo positivo indica que la correlación es directa, es decir que a grandes valores de <img src="https://latex.codecogs.com/gif.latex?X" title="X" /> corresponde valores grandes de <img src="https://latex.codecogs.com/gif.latex?Y" title="Y" />, y viceversa.
+El resultado de la covarianza es <img src="https://latex.codecogs.com/gif.latex?C_{xy}&space;=&space;0,06669" title="C_{xy} = 0,06669" />, del cual lo más impotante es el signo. Al ser signo positivo indica que la correlación es directa, es decir que a grandes valores de <img src="https://latex.codecogs.com/gif.latex?X" title="X" /> corresponde valores grandes de <img src="https://latex.codecogs.com/gif.latex?Y" title="Y" />, y viceversa. Una vez más se confirma la independencia de las variables puesto que el valor de la covarianza es cercano a cero.
 ### Coeficiente de correlación
 Con el valor de la covarianza, se puede usar (\ref{ecu:coef}) para obtener el coeficiente de correlación. En este caso se necesita el valor de desviación estandar de las variables aleatorias, estos valores para una distribución normal corresponden al parámetro <img src="https://latex.codecogs.com/gif.latex?\sigma" title="\sigma" /> y ya había sido calculado anteriormente.
 
